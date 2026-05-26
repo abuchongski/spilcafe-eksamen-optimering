@@ -1114,3 +1114,10 @@ footer {
   background: #fff3f1;
   color: var(--accent);
 }
+
+/*  */
+.dialog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}

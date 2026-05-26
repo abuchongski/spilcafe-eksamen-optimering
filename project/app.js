@@ -260,6 +260,7 @@ function showGameDialog(game) {
       <div class="dialog-title-row">
         <h2>${game.title}</h2>
         <span class="dialog-genre">${game.genre}</span>
+        <span class="dialog-genre">${game.difficulty}</span>
       </div>
 
       <div class="dialog-rating">
