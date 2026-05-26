@@ -345,6 +345,7 @@ main {
 }
 
 .control-group select {
+  min-height: 44px;
   background: var(--surface);
   border: 1.5px solid var(--border-strong);
   color: var(--text);
@@ -356,6 +357,7 @@ main {
   transition: border-color 0.2s ease;
   cursor: pointer;
   white-space: nowrap;
+ 
 }
 
 .control-group select:hover {
@@ -388,6 +390,7 @@ main {
 }
 
 .control-group input {
+  min-height: 44px;
   width: 100%;
   background: var(--surface);
   border: 1.5px solid var(--border-strong);
@@ -966,10 +969,21 @@ footer {
   padding: var(--sp-4);
   box-shadow: var(--shadow-sm);
 
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   gap: var(--sp-2);
+  align-items: center; */
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 249, 240, 0.75);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  
 }
 
 /* Dropdowns må ikke presse layoutet ud af skærmen */
@@ -985,6 +999,7 @@ footer {
 
 /* Nulstil skal blive synlig */
 #reset-filters {
+  min-height: 44px;
   flex-shrink: 0;
 }
 
