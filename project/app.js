@@ -94,6 +94,7 @@ function matchesPlaytime(game, selectedPlaytime) {
 }
 
 function applyFiltersAndSort() {
+   updateActiveFilters();
   const selectedGenre = genreSelect.value;
   const selectedPlayers = playersSelect.value;
   const selectedAge = ageSelect.value;
@@ -144,6 +145,7 @@ function applyFiltersAndSort() {
       matchesPlaytime(game, selectedPlaytime) &&
       matchesSearch
     );
+   
   });
 
   const difficultyRank = {
@@ -366,6 +368,7 @@ resetFilters.addEventListener("click", () => {
   searchInput.value = "";
 
   applyFiltersAndSort();
+  
 });
 
 genreSelect.addEventListener("change", applyFiltersAndSort);
@@ -397,3 +400,19 @@ backToTopButton.addEventListener("click", () => {
 document.querySelector("#open-booking").addEventListener("click", () => {
   openBookingDialog();
 });
+
+function updateActiveFilters() {
+  const filterSelects = [
+    genreSelect,
+    playersSelect,
+    ageSelect,
+    difficultySelect,
+    playtimeSelect,
+    sortSelect
+  ];
+
+  filterSelects.forEach(select => {
+    const defaultValue = select === sortSelect ? "none" : "all";
+    select.classList.toggle("active-filter", select.value !== defaultValue);
+  });
+}
