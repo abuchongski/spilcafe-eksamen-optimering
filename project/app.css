@@ -110,7 +110,7 @@ header h1 span:last-child {
 }
 
 /* book bord knap */
-.dialog-book-btn {
+/* .dialog-book-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,7 +130,7 @@ header h1 span:last-child {
 
 .dialog-book-btn:hover {
   background: var(--accent-hover);
-}
+} */
 
 /* booking dialog */
 dialog#booking-dialog {
